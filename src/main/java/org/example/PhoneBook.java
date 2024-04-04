@@ -15,4 +15,7 @@ public class PhoneBook {
         }
         return "Контакт не найден";
     }
+    public String findByName(String name) {
+        return null;
+    }
 }
