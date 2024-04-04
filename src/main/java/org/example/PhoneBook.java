@@ -16,6 +16,10 @@ public class PhoneBook {
         return "Контакт не найден";
     }
     public String findByName(String name) {
-        return null;
+        if (contacts.get(name) != null) {
+            return contacts.get(name);
+        } else {
+            return "Контакт не найден";
+        }
     }
 }
