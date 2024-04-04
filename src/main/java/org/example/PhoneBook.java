@@ -22,4 +22,7 @@ public class PhoneBook {
             return "Контакт не найден";
         }
     }
+    public String printAllNames() {
+        return null;
+    }
 }

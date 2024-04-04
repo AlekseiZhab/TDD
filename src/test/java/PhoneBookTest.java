@@ -27,4 +27,12 @@ public class PhoneBookTest {
         String number = phoneBook.findByName("Алексей");
         Assertions.assertEquals("1234567890", number);
     }
+    @org.junit.jupiter.api.Test
+    public void testPrintAllNames1() {
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.add("Алексей", "1234567890");
+        phoneBook.add("Сергей", "0987654321");
+        String allNames = phoneBook.printAllNames();
+        Assertions.assertEquals("Алексей Сергей", allNames);
+    }
 }
