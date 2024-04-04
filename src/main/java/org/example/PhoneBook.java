@@ -1,5 +1,9 @@
 package org.example;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class PhoneBook {
     public HashMap<String, String> contacts = new HashMap<>();
@@ -23,6 +27,8 @@ public class PhoneBook {
         }
     }
     public String printAllNames() {
-        return null;
+        List<String> allName = new ArrayList<>(contacts.keySet());
+        return allName.stream().sorted().map(Object::toString).collect(Collectors.joining(" "));
+
     }
 }
